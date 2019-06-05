@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    <h1>We are at the reservations endpoint</h1>
+    <p>Date: <input type="text"></p>
+    <table>
+        <tr>
+            <td>Room</td>
+            <td>Room Number</td>
+            <td>Guest</td>
+        </tr>
+        <tr th:each="roomReservation:${roomReservations}">
+            <td th:text="${roomReservation.roomName}">Room Name</td>
+            <td th:text="${roomReservation.roomNumber}">Room Number</td>
+<!--            <td th:text="${roomReservation.lastname}!=null? ${roomReservation.lastname}:'VACANT'">Full Name</td>-->
+        </tr>
+    </table>
+</body>
+</html>
